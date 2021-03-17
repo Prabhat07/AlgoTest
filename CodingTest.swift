@@ -11,7 +11,7 @@ public func solution(_ N : Int) -> Int {
     let strNumber = "\(abs(N))"
     var arr = [Int]();
     for index in 0...strNumber.count {
-        var str = strNumber;
+        var str = strNumber
         str.insert("5", at: str.index(str.startIndex, offsetBy: index))
         let num = N < 0 ? -Int(str)! : Int(str)!
         arr.append(num)
