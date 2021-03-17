@@ -9,11 +9,10 @@ import Foundation
 
 public func solution(_ N : Int) -> Int {
     let strNumber = "\(abs(N))"
-    let strInsertNumber = "5"
     var arr = [Int]();
-    for index in 0..<strNumber.count + 1 {
+    for index in 0...strNumber.count {
         var str = strNumber;
-        str.insert(contentsOf: strInsertNumber, at: str.index(str.startIndex, offsetBy: index))
+        str.insert("5", at: str.index(str.startIndex, offsetBy: index))
         let num = N < 0 ? -Int(str)! : Int(str)!
         arr.append(num)
     }
